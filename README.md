@@ -1,6 +1,6 @@
 # Projeto de criptomoedas
 
-Esse é um projeto simples que tem por objetivo listar o valor de criptmoedas e lista-los, e também é possível obter os detalhes da criptmoeda ao clicar nela. É um projeto simples cujo objetivo é aprender mais sobre React, seus hooks e o uso com Typescript.
+Esse é um projeto simples que tem por objetivo listar o valor de uma lista de criptmoedas que são recebidas por uma API. Também é possível obter os detalhes da criptmoeda ao clicar nela. É um projeto simples cujo objetivo é aprender mais sobre React, seus hooks e o uso com Typescript.
 
 # Execução
 
