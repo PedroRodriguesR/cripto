@@ -4,7 +4,7 @@ Esse é um projeto simples que tem por objetivo listar o valor de uma lista de c
 
 # Execução
 
-Para executar o projeto, é necessário fazer o git clone. Em seguida o 'npm i' e depois para executar o 'npm run dev'. Depois somente ir ao link localhost disponibilizado.
+Para executar o projeto, é necessário fazer o git clone. Em seguida o 'npm i' e depois para executar o 'npm run dev'. Então ir ao link localhost disponibilizado.
 
 
 # React + TypeScript + Vite
