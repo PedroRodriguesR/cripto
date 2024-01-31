@@ -1,3 +1,7 @@
+# Projeto de criptomoedas
+
+Esse é um projeto simples que tem por objetivo listar o valor de criptmoedas e lista-los, e também é possível obter os detalhes da criptmoeda ao clicar nela. É um projeto simples cujo objetivo é aprender mais sobre React, seus hooks e o uso com Typescript.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
