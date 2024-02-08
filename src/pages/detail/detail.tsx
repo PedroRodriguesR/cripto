@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import style from './detail.module.css'
 
 interface CoinProps {
@@ -32,6 +32,8 @@ export function Detail() {
     const [coinDetail, setCoinDetail] = useState<CoinProps>()
     const [loading, setLoading] = useState(true)
 
+    const navigate = useNavigate()
+
 
     useEffect(() => {
         function getData() {
@@ -39,6 +41,8 @@ export function Detail() {
                 .then(result => result.json())
                 .then((data: CoinProps) => {
                     console.log(data)
+
+                    if (data.error) navigate('/')
 
                     let price = Intl.NumberFormat('pt-BR', {
                         currency: 'BRL',
@@ -52,7 +56,7 @@ export function Detail() {
                         formatedLowPrice: price.format(Number(data.low_24h)),
                         formatedHighPrice: price.format(Number(data.high_24h))
                     }
-
+                    console.log(Number(coinDetail?.delta_24h.replace(',', '.')))
 
                     setCoinDetail(formatedDataCoin)
                 })
@@ -74,10 +78,19 @@ export function Detail() {
 
     return (
         <div className={style.container}>
-            <h1>Detalhes</h1>
-            <h1 >{coinsymbol}</h1>
             <h1 className={style.center}>{coinDetail?.name}</h1>
             <p className={style.center}>{coinDetail?.symbol}</p>
+
+
+            <section className={style.content}>
+                <p><strong>Preço:</strong> {coinDetail?.formatedPrice}</p>
+                <p><strong>Maior preço 24h:</strong> {coinDetail?.formatedHighPrice} </p>
+                <p><strong>Menor preço 24h:</strong> {coinDetail?.formatedLowPrice}</p>
+                <p><strong>Delta 24h:</strong>
+                    <span className={Number(coinDetail?.delta_24h.replace(',', '.')) >= 0 ? style.profit : style.loss}>{coinDetail?.delta_24h}</span>
+                </p>
+                <p><strong>Valor de mercado:</strong> {coinDetail?.formatedMarket}</p>
+            </section>
         </div>
 
     )

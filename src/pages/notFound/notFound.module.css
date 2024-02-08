@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1080px;
+    width: 100%;
+}
+
+.container h1 {
+    margin-bottom: 20px;
+    color: white
+}
+
+
+.container a {
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 8px 24px;
+    background-color: grey;
+    color: white;
+    transition-duration: all 0.1ms;
+}
+
+.container a:hover {
+    transform: scale(1.08);
+    background-color: #30beffda;
+}
