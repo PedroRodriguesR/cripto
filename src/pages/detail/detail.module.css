@@ -1,4 +1,4 @@
-.container{
+.container {
     color: white;
     display: flex;
     flex-direction: column;
@@ -7,37 +7,37 @@
     padding: 0 14px;
 }
 
-.center{
+.center {
     margin-bottom: 14px;
 }
 
-.content{
-    max-width: 420px;
+.content {
+    max-width: 500px;
     background-color: #0f0f0f;
     padding: 24px;
     border-radius: 8px;
+    margin-top: 24px auto;
 }
 
-.content p:not(:last-of-type){
+.content p:not(:last-of-type) {
     margin-bottom: 16px;
 }
 
 
-.content p{
+.content p {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 65px;
 }
 
-.profit{
+.profit {
     color: green;
 }
 
-.loss{
+.loss {
     color: red
 }
 
-span{
+span {
     margin-left: 5px;
 }
-
